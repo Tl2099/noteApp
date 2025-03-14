@@ -14,29 +14,33 @@ import tl209.noteapp_v1.ui.viewmodel.NoteViewModel
 
 @Composable
 fun NavGraph(navController: NavHostController) {
+    val viewModel: NoteViewModel = hiltViewModel()
     NavHost(navController, startDestination = "note_list") {
         composable("note_list") {
-            NoteListScreen { note ->
-                navController.navigate("note_detail/${note?.id ?: -1}")
-            }
+            NoteListScreen(
+                onNoteClick = { note ->
+                    val noteId = note?.id ?: -1
+                    navController.navigate("note_Detail/$noteId")
+                },
+                viewModel = viewModel
+            )
         }
-//        composable("note_detail/{noteId}", arguments = listOf(navArgument("noteId") { type = NavType.IntType })) { backStackEntry ->
-//            val noteId = backStackEntry.arguments?.getInt("noteId") ?: -1
-//            val viewModel: NoteViewModel = hiltViewModel()
-//            val note = viewModel.notes.value.firstOrNull { it.id == noteId }
-//            NoteDetailScreen(note = note, onBack = { navController.popBackStack() })
-//        }
         composable(
-            route = "noteDetail/{noteId}",
+            route = "note_Detail/{noteId}",
             arguments = listOf(navArgument("noteId") { type = NavType.IntType })
         ) { backStackEntry ->
-            val noteId = backStackEntry.arguments?.getInt("noteId")
+            val noteId = backStackEntry.arguments?.getInt("noteId") ?: 0
+            if (noteId <= 0) {
+                navController.popBackStack()
+                return@composable
+            }
+
             NoteDetailScreen(
                 noteId = noteId,
                 navController = navController,
+                viewModel = viewModel,
                 onBack = { navController.popBackStack() }
             )
         }
-
     }
 }

@@ -27,7 +27,6 @@ object DatabaseModule{
     }
 
     @Provides
-    @Singleton
     fun provideNoteDao(db: NoteDatabase): NoteDao = db.noteDao()
     //Lay NoteDao tu NoteDatabase va cung cap no cho Hilt
     //Khong can @Singleton vi DAO da duoc quan ly  ben trong database
