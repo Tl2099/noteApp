@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.CountryDetailActivity">
+
+    <ImageView
+        android:id="@+id/image_flag_detail"
+        android:layout_width="@dimen/layout_height_200"
+        android:layout_height="@dimen/layout_height_200"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/text_country_flag"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/china" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <TextView
+        android:id="@+id/text_nation_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/text_nation"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/text_size_24"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/text_capital_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_capital"
+        android:textColor="@color/material_dynamic_neutral10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_nation_detail"
+        app:layout_constraintStart_toStartOf="@+id/text_nation_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_nation_detail" />
+
+    <TextView
+        android:id="@+id/text_population_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_population"
+        android:textColor="@color/material_dynamic_neutral10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_nation_detail"
+        app:layout_constraintStart_toStartOf="@+id/text_nation_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_capital_detail" />
+
+    <TextView
+        android:id="@+id/text_area_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_area"
+        android:textColor="@color/material_dynamic_neutral10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_population_detail"
+        app:layout_constraintStart_toStartOf="@+id/text_population_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_population_detail" />
+
+    <TextView
+        android:id="@+id/text_density_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_density"
+        android:textColor="@color/material_dynamic_neutral10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_area_detail"
+        app:layout_constraintStart_toStartOf="@+id/text_area_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_area_detail" />
+
+    <TextView
+        android:id="@+id/text_world_share_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/text_world_share"
+        android:textColor="@color/material_dynamic_neutral10"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/text_density_detail"
+        app:layout_constraintStart_toStartOf="@+id/text_density_detail"
+        app:layout_constraintTop_toBottomOf="@+id/text_density_detail" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_2"
+        android:layout_marginStart="@dimen/margin_64"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/margin_64"
+        android:background="@drawable/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

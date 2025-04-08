@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Exercises10.2</string>
+    <string name="text_china">China</string>
+    <string name="text_beijing">Beijing</string>
+    <string name="text_country_flag">Country\'s flag</string>
+    <string name="text_nation">Nation: %s</string>
+    <string name="text_capital">Capital: %s</string>
+    <string name="text_population">Population: %5.1f million people</string>
+    <string name="text_area">Area: %d Km\u00B2</string>
+    <string name="text_density">Density: %d people/Km\u00B2</string>
+    <string name="text_world_share">World Share: %s</string>
+</resources>
