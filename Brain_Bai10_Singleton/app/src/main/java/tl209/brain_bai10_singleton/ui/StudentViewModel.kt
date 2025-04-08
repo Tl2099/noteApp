@@ -11,7 +11,7 @@ import tl209.brain_bai10_singleton.data.model.Student
 
 class StudentViewModel : ViewModel() {
     private val _students = MutableLiveData<List<Student>>()
-    val student: LiveData<List<Student>> = _students
+    val students: LiveData<List<Student>> = _students
 
     fun loadStudents() {
         val dataSource = RemoteDataSource.instance
