@@ -13,11 +13,12 @@
         android:layout_marginStart="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_small"
         android:layout_marginBottom="@dimen/margin_small"
-        android:contentDescription="@string/desc_image_avatar"
+        android:contentDescription="@string/desc_image_student_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ImageContrastCheck"
+
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -26,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_small"
         android:layout_marginEnd="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_tiny"
+        android:layout_marginBottom="@dimen/margin_small"
         android:text="@string/student_id"
         android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
         app:layout_constraintBottom_toTopOf="@+id/text_full_name"
@@ -50,8 +51,8 @@
         android:id="@+id/text_gpa"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_tiny"
-        android:text="@string/text_gpa"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/student_gpa"
         android:textAppearance="@style/TextAppearance.Material3.BodySmall"
         android:textColor="@color/orange"
         app:layout_constraintEnd_toEndOf="@+id/text_full_name"
